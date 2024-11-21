@@ -16,7 +16,7 @@ const Projects = () => {
       </motion.h2>
       <div>
         {PROJECTS.map((item, index) => (
-          <a key={index} href={item?.link} className="mb-8 flex flex-wrap lg:justify-center">
+          <div key={index} href={item?.link} className="mb-8 flex flex-wrap lg:justify-center">
             <motion.div
             whileInView={{opacity:1, x:0}}
             initial={{opacity:0, x:-100}}
@@ -34,9 +34,9 @@ const Projects = () => {
              initial={{opacity:0, x:100}}
              transition={{duration:1.5}}
              className="w-full max-w-xl lg:w-3/4">
-              <h3 className="mb-2 font-semibold text-2xl text-white">
+              <a href={item?.link}><h3 className="mb-2 font-semibold text-2xl text-white">
                 {item?.title}
-              </h3>
+              </h3></motion.div></a>
               <p className="text-stone-400 mb-4">{item?.description}</p>
               {item?.technologies?.map((tech, index) => (
                 <span className="mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300">
@@ -44,7 +44,7 @@ const Projects = () => {
                 </span>
               ))}
             </motion.div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
