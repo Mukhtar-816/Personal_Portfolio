@@ -36,26 +36,23 @@ export const PROJECTS = [
   {
     title: "CarWash Website",
     image: project3,
-    description:
-      "A Car Wash Booking Website.",
+    description:  "A Car Wash Booking Website.",
     technologies: ["React", "Firebase"],
-        link : "https://carwash305.vercel.app/"
+    link : "https://carwash305.vercel.app/"
   },
   {
     title: "Educationl App",
     image: 'https://play-lh.googleusercontent.com/335xE8XsV3DduW4fwUQtlnPNaI6igL95Eru6ixuKSuhYxxqICAQvYPEViMSGASbLX2CO=w240-h480-rw',
-    description:
-      "An application for helping you choose your career option with ease, and get you where you belong to.",
+    description:"An application for helping you choose your career option with ease, and get you where you belong to.",
     technologies: ["React-Native", "Firebase"],
     link : "/"
   },
   {
     title: "CarWash App",
     image: project3,
-    description:
-      "A Car Wash Booking App.",
+    description: "A Car Wash Booking App.",
     technologies: ["React-Native", "Firebase"],
-        link : "/"
+    link : "/"
   },
   
 ];
