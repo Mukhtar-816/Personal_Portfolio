@@ -36,7 +36,7 @@ const Projects = () => {
              className="w-full max-w-xl lg:w-3/4">
               <a href={item?.link}><h3 className="mb-2 font-semibold text-2xl text-white">
                 {item?.title}
-              </h3></motion.div></a>
+              </h3></a>
               <p className="text-stone-400 mb-4">{item?.description}</p>
               {item?.technologies?.map((tech, index) => (
                 <span className="mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300">

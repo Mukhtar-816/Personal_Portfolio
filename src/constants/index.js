@@ -1,7 +1,5 @@
-import project1 from "../assets/projects/project-1.webp";
-import project2 from "../assets/projects/project-2.webp";
-import project3 from "../assets/projects/project-3.webp";
-import project4 from "../assets/projects/project-4.webp";
+import project3 from "../assets/projects/project1.png";
+import project4 from "../assets/projects/logo.png";
 
 export const EXPERIENCES = [
   {
@@ -16,7 +14,7 @@ export const EXPERIENCES = [
   },
   {
     img : "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
-    role: "Frontend Developer",    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
+    role: "Salvador desravines",    description: `Designed and developed user interfaces for web applications using React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
     technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
   },
   {
@@ -34,18 +32,25 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "CarWash Website",
+    title: "Car-Wash Website",
     image: project3,
     description:  "A Car Wash Booking Website.",
     technologies: ["React", "Firebase"],
     link : "https://carwash305.vercel.app/"
   },
   {
-    title: "Educationl App",
+    title: "Uni-School (Educationl App)",
     image: 'https://play-lh.googleusercontent.com/335xE8XsV3DduW4fwUQtlnPNaI6igL95Eru6ixuKSuhYxxqICAQvYPEViMSGASbLX2CO=w240-h480-rw',
     description:"An application for helping you choose your career option with ease, and get you where you belong to.",
     technologies: ["React-Native", "Firebase"],
     link : "/"
+  },
+  {
+    title: "Dife-Holdings (Business Website)",
+    image: project4,
+    description:"An application for helping you to boost your business with ease, and get you perfect guidance.",
+    technologies: ["React", "Firebase"],
+    link : "https://dife-holdings.vercel.app"
   },
   {
     title: "CarWash App",
