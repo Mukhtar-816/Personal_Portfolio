@@ -50,7 +50,7 @@ export const PROJECTS = [
     image: project4,
     description:"An application for helping you to boost your business with ease, and get you perfect guidance.",
     technologies: ["React", "Firebase"],
-    link : "https://dife-holdings.vercel.app"
+    link : "https://difeholdings.com/"
   },
   {
     title: "CarWash App",
@@ -64,8 +64,8 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  phoneNo: "",
+  email: "mukhtarshaikh.official@gmail.com",
 };
 
 
@@ -84,6 +84,6 @@ export const Socials = [
   },
   {
     icon: "https://static.vecteezy.com/system/resources/previews/046/853/019/non_2x/twitter-x-black-and-white-logo-transparent-background-free-png.png",
-    link: "/",
+    link: "https://x.com/_MukhtarShaikh",
   },
 ];
