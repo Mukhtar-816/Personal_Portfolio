@@ -51,7 +51,7 @@ const Hero = () => {
             </motion.p>
             <br></br>
             <motion.a
-              href="./Resume.pdf"
+              href="../public/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
