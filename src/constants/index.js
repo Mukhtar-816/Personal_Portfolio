@@ -59,6 +59,13 @@ export const PROJECTS = [
     technologies: ["React-Native", "Firebase"],
     link : "/"
   },
+  {
+    title : "Landing Dev Page",
+    image : "",
+    description : "A simple landing page designed for developers",
+    technologies: ["React"],
+    link : "https://web-page-react-js.vercel.app/"
+  }
   
 ];
 
