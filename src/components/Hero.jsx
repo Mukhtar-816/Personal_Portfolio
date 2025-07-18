@@ -14,7 +14,7 @@ const Hero = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 2, delay: 1.5 }}
-              className="flex bg-neutral-950 w-full justify-center rounded-3xl sm:h-[550px] max-h-[550px]"
+              className="flex bg-white/20 backdrop-blur-md w-full justify-center rounded-3xl sm:h-[550px] max-h-[550px]"
             >
               <img src={img} className="rounded-full" />
             </motion.div>
@@ -58,7 +58,7 @@ const Hero = () => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
-              className="p-5 bg-white rounded-full font-semibold text-black hover:bg-black hover:text-white hover:border-2"
+              className="p-5 bg-gradient-to-r from-white/5 to-white/50 transition-all duration-300  bg-white/30 backdrop-blur-lg rounded-full font-semibold text-black hover:bg-purple-900 hover:text-white"
             >
               Download my Resume
             </motion.a>

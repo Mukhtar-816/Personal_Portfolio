@@ -32,7 +32,7 @@ const Technologies = () => {
           repeat:Infinity,
           repeatType:'reverse'
         }}
-         className="p-4 bg-neutral-950 rounded-xl flex items-center space-x-4">
+         className="p-4 bg-white/20 backdrop-blur-sm rounded-xl flex items-center space-x-4">
           <RiReactjsLine className="text-7xl text-cyan-400" />
         </motion.div>
         <motion.div
@@ -45,7 +45,7 @@ const Technologies = () => {
           repeat:Infinity,
           repeatType:'reverse'
         }}
-         className="p-4  bg-neutral-950 rounded-xl flex items-center space-x-4">
+         className="p-4  bg-white/20 backdrop-blur-sm rounded-xl flex items-center space-x-4">
           <RiNodejsLine className="text-7xl text-green-500" />
         </motion.div>
         <motion.div
@@ -57,7 +57,7 @@ const Technologies = () => {
           repeat:Infinity,
           repeatType:'reverse'
         }}
-         className="p-4  bg-neutral-950 rounded-xl flex items-center space-x-4">
+         className="p-4  bg-white/20 backdrop-blur-sm rounded-xl flex items-center space-x-4">
           <TbBrandRedux className="text-7xl text-purple-600" />
         </motion.div>
         <motion.div
@@ -70,7 +70,7 @@ const Technologies = () => {
           repeat:Infinity,
           repeatType:'reverse'
         }}
-         className="p-4  bg-neutral-950 rounded-xl flex items-center space-x-4">
+         className="p-4  bg-white/20 backdrop-blur-sm rounded-xl flex items-center space-x-4">
           <SiTailwindcss className="text-7xl text-blue-600" />
         </motion.div>
         <motion.div
@@ -82,7 +82,7 @@ const Technologies = () => {
           repeat:Infinity,
           repeatType:'reverse'
         }}
-         className="p-4  bg-neutral-950 rounded-xl flex items-center space-x-4">
+         className="p-4  bg-white/20 backdrop-blur-sm rounded-xl flex items-center space-x-4">
           <SiMongodb className="text-7xl text-green-800" />
         </motion.div>
         <motion.div
@@ -95,7 +95,7 @@ const Technologies = () => {
           repeat:Infinity,
           repeatType:'reverse'
         }}
-         className="p-4  bg-neutral-950 rounded-xl flex items-center space-x-4">
+         className="p-4  bg-white/20 backdrop-blur-sm rounded-xl flex items-center space-x-4">
           <RiFirebaseFill className="text-7xl text-orange-400" />
         </motion.div>
       </motion.div>

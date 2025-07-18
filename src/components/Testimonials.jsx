@@ -20,8 +20,8 @@ const Testimonials = () => {
           key={index}
           whileInView={{x:0, opacity:1}}
           initial={{x:-100, opacity:0}}
-          transition={{duration:0.5, delay:1, }}
-          className=" p-5 bg-neutral-950 rounded-md justify-center items-center mb-5 max-w-[400px]  mx-5">
+          transition={{duration:0.5, delay:index == 0 ? 1 : index, }}
+          className=" p-5 bg-white/20 backdrop-blur-md rounded-md justify-center items-center mb-5 max-w-[400px]  mx-5">
             <p className="text-white mb-5">{item?.description}</p>
             <div className=" flex justify-start left-0 px-2 gap-5 items-center">
               <img
