@@ -61,13 +61,13 @@ export const PROJECTS = [
     technologies: ["React-Native", "Firebase"],
     link: "/"
   },
-  {
-    title: "Landing Dev Page",
-    image: "",
-    description: "A simple landing page designed for developers",
-    technologies: ["React"],
-    link: "https://web-page-react-js.vercel.app/"
-  },
+  // {
+  //   title: "Landing Dev Page",
+  //   image: "",
+  //   description: "A simple landing page designed for developers",
+  //   technologies: ["React"],
+  //   link: "https://web-page-react-js.vercel.app/"
+  // },
  {
     title: "Trego Rent App",
     image: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0a/ba/4d/0aba4d91-e268-c963-981c-87d645a639c1/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp",

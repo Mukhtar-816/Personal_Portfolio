@@ -1,151 +1,86 @@
 import React from "react";
 import { PROJECTS } from "../constants/index";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+
+const cardVariants = {
+  offscreen: { opacity: 0, y: 30 },
+  onscreen: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 const Projects = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-bold text-white mb-4">
-            Featured Projects
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            A collection of projects that showcase my skills and passion for creating innovative solutions.
-          </p>
-        </motion.div>
+    <div className="pb-20 px-4 lg:px-20">
+      {/* Section Heading */}
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -30 }}
+        transition={{ duration: 1 }}
+        className="my-20 text-center text-4xl lg:text-5xl text-white font-bold tracking-wide"
+      >
+        Projects
+      </motion.h2>
 
-        {/* Projects Grid */}
-        <div className="space-y-16">
-          {PROJECTS.map((project, index) => (
+      {/* Projects Grid */}
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-1 xl:grid-cols-2 gap-8"
+      >
+        {PROJECTS.map((item, index) => {
+          const isEven = index % 2 === 0;
+          return (
             <motion.div
               key={index}
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`flex flex-col lg:flex-row items-center gap-8 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              variants={cardVariants}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className={`flex flex-col lg:flex-row items-center hover:border-white/50 border border-white/0 bg-white/10 backdrop-blur-3xl rounded-2xl p-4 lg:p-6 shadow-md hover:shadow-xl transition-all
+                ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"}`}
             >
-              {/* Project Image */}
+              {/* Image */}
               <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: index % 2 === 1 ? 100 : -100 }}
-                transition={{ duration: 1, delay: 0.2 }}
-                className="lg:w-1/2 w-full"
+                whileHover={{ scale: 1.03 }}
+                className="w-full lg:w-1/2 mb-4 lg:mb-0 flex-shrink-0 rounded-2xl overflow-hidden flex justify-center items-center"
               >
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <img
-                    src={project?.image}
-                    alt={project?.title}
-                    className="w-full h-72 object-cover rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                <img
+                  src={item?.image}
+                  alt={item?.title}
+                  className="w-full h-40 lg:h-48 object-contain"
+                />
               </motion.div>
 
-              {/* Project Content */}
+              {/* Content */}
               <motion.div
+                className="w-full lg:w-1/2 flex flex-col justify-center lg:px-6"
+                initial={{ opacity: 0, x: isEven ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: index % 2 === 1 ? -100 : 100 }}
-                transition={{ duration: 1, delay: 0.4 }}
-                className="lg:w-1/2 w-full space-y-6"
+                transition={{ duration: 0.8 }}
               >
-                {/* Project Title & Links */}
-                <div className="flex items-center justify-between flex-wrap gap-4">
-                  <h3 className="text-3xl font-bold text-white hover:text-blue-400 transition-colors duration-300">
-                    {project?.title}
+                <a href={item?.link}>
+                  <h3 className="mb-3 text-2xl lg:text-3xl font-semibold text-white hover:underline">
+                    {item?.title}
                   </h3>
-                  <div className="flex gap-3">
-                    {project?.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 hover:text-blue-300 transition-all duration-300 border border-blue-500/30"
-                      >
-                        <ExternalLink size={20} />
-                      </a>
-                    )}
-                    {project?.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-slate-600/20 hover:bg-slate-600/30 text-slate-400 hover:text-slate-300 transition-all duration-300 border border-slate-600/30"
-                      >
-                        <Github size={20} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-
-                {/* Project Description */}
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  {project?.description}
+                </a>
+                <p className="text-stone-400 mb-4 leading-relaxed">
+                  {item?.description?.substring(0, 112)+".."}
                 </p>
-
-                {/* Technologies */}
-                <div className="space-y-3">
-                  <h4 className="text-white font-semibold text-sm uppercase tracking-wider">
-                    Technologies Used
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project?.technologies?.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 text-sm font-medium bg-gradient-to-r from-slate-700 to-slate-600 text-slate-200 rounded-full border border-slate-600/50 hover:border-slate-500/50 transition-colors duration-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Call to Action */}
-                {project?.link && (
-                  <div className="pt-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {item?.technologies?.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="rounded-lg bg-stone-900 px-3 py-1 text-sm font-medium text-stone-300"
                     >
-                      View Project
-                      <ExternalLink size={16} />
-                    </a>
-                  </div>
-                )}
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             </motion.div>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mt-20"
-        >
-          <p className="text-slate-400 text-lg mb-6">
-            Interested in working together?
-          </p>
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            Get In Touch
-          </button>
-        </motion.div>
-      </div>
-    </section>
+          );
+        })}
+      </motion.div>
+    </div>
   );
 };
 
